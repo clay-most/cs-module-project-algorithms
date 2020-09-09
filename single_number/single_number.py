@@ -3,10 +3,15 @@ Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
 def single_number(arr):
-    # Your code here
+    
+    checked = []
 
-    pass
-
+    for num in arr:
+        if num not in checked:
+            checked.append(num)
+        else:
+            checked.remove(num)
+    return(checked[0])
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
